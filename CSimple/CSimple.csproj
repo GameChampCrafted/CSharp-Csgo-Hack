@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EDF8EAD7-7829-43D8-BF00-A2078F1A0263}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CSimple</RootNamespace>
+    <AssemblyName>CSimple</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AlphaGradientPanel, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AlphaGradientPanel.1.1.2.0\lib\net40\AlphaGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="FB.Mvc.CheckBoxList, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CheckboxList.Mvc.FB.1.0.0\lib\net45\FB.Mvc.CheckBoxList.dll</HintPath>
+    </Reference>
+    <Reference Include="MACTrackBarLib, Version=1.0.5896.38740, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MACTrackBarLib.dll.1.0.2\lib\net40\MACTrackBarLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.0.0.14576, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.1\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.0.1205, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.5.0.1205\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\..\source\repos\WindowsApp2\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.0.0.668\lib\net40\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SteamKit2, Version=1.8.0.26737, Culture=neutral, PublicKeyToken=ed3ce47ed5aad940, processorArchitecture=MSIL">
+      <HintPath>..\packages\SteamKit2.1.8.0\lib\net45\SteamKit2.dll</HintPath>
+    </Reference>
+    <Reference Include="Steamkit2-csgo, Version=1.2.0.0, Culture=neutral, PublicKeyToken=dd665b295b1468a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\SteamKit-CSGO.1.2.0\lib\net45\Steamkit2-csgo.dll</HintPath>
+    </Reference>
+    <Reference Include="SuaveControls.MaterialForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialFormControls.2018.2.22-pre1\lib\portable45-net45+win8+wpa81\SuaveControls.MaterialForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TradeWright.TabControlExtra, Version=2.0.0.0, Culture=neutral, PublicKeyToken=f4d0df7e5886cbe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\TradeWright.TabControlExtra.2.0.0\lib\net45\TradeWright.TabControlExtra.dll</HintPath>
+    </Reference>
+    <Reference Include="VAMemory">
+      <HintPath>..\..\..\..\Downloads\VAMemory.dll</HintPath>
+    </Reference>
+    <Reference Include="Waher.Theme.GothicPeacock, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Waher.Theme.GothicPeacock.1.0.2\lib\netstandard1.0\Waher.Theme.GothicPeacock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hack Stuff\hsAimbot.cs" />
+    <Compile Include="Hack Stuff\hsBhopFOV.cs" />
+    <Compile Include="Hack Stuff\hsGlow.cs" />
+    <Compile Include="Hack Stuff\hsHotKeys.cs" />
+    <Compile Include="Hack Stuff\hsNoFlash.cs" />
+    <Compile Include="Hack Stuff\hsTrigger.cs" />
+    <Compile Include="Hack Stuff\hsValues.cs" />
+    <Compile Include="LoadScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadScreen.Designer.cs">
+      <DependentUpon>LoadScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options\ProcessStartup\ProcessStartup.cs" />
+    <Compile Include="testing\test_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testing\test_form.Designer.cs">
+      <DependentUpon>test_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Themes\Ambiance Theme.cs" />
+    <Compile Include="Themes\iTalk Theme.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SDK\Globals.cs" />
+    <Compile Include="SDK\Memory.cs" />
+    <Compile Include="SDK\Offsets.cs" />
+    <Compile Include="SDK\Structs\Color.cs" />
+    <Compile Include="SDK\Structs\GlowObject.cs" />
+    <Compile Include="SDK\Util.cs" />
+    <Compile Include="Themes\MonoFlat Theme.cs" />
+    <Compile Include="UserInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface.Designer.cs">
+      <DependentUpon>UserInterface.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadScreen.resx">
+      <DependentUpon>LoadScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="testing\test_form.resx">
+      <DependentUpon>test_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface.resx">
+      <DependentUpon>UserInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CheckboxList.mvc.readme" />
+    <None Include="Content\icheck-material-custom.scss" />
+    <None Include="Content\icheck-material.scss" />
+    <None Include="Content\_icheck-material-base.scss" />
+    <None Include="Content\_icheck-material-theme.scss" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Root\Themes\GothicPeacock\GothicPeacock.cssx" />
+    <None Include="Scripts\bower.json" />
+    <None Include="Scripts\build.log" />
+    <None Include="Waher.Theme.GothicPeacock.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\config.ini" />
+    <None Include="Resources\pict--close-window-button-window-elements---vector-stencils-library.png--diagram-flowchart-example.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\icheck-material-custom.css" />
+    <Content Include="Content\icheck-material-custom.min.css" />
+    <Content Include="Content\icheck-material.css" />
+    <Content Include="Content\icheck-material.min.css" />
+    <Content Include="favicon.ico" />
+    <None Include="Resources\baseline_arrow_right_alt_black_48dp.png" />
+    <None Include="Resources\baseline_done_black_48dp.png" />
+    <Content Include="Root\Themes\GothicPeacock\GothicPeacock.png" />
+    <Content Include="Root\Themes\GothicPeacock\GothicPeacock.xml" />
+    <Content Include="Root\Themes\GothicPeacock\GothicPeacock1600x1600.png" />
+    <Content Include="Root\Themes\GothicPeacock\GothicPeacock1600x1600Dimmed.png" />
+    <Content Include="Root\Themes\GothicPeacock\GothicPeacock800x800.png" />
+    <Content Include="Root\Themes\GothicPeacock\GothicPeacock800x800Dimmed.png" />
+    <Content Include="Root\Themes\GothicPeacock\GothicPeacockBanner1400x425.png" />
+    <Content Include="Root\Themes\GothicPeacock\GothicPeacockBanner1900x500.png" />
+    <Content Include="Root\Themes\GothicPeacock\GothicPeacockBanner2000x600.png" />
+    <Content Include="Scripts\LICENSE.txt" />
+    <Content Include="Scripts\polymer-micro.html" />
+    <Content Include="Scripts\polymer-mini.html" />
+    <Content Include="Scripts\polymer.html" />
+    <None Include="Resources\baseline_menu_white_48dp1.png" />
+    <None Include="Resources\shwmore1.png" />
+    <None Include="Resources\minimize1.png" />
+    <None Include="Resources\close_button1.png" />
+    <None Include="Resources\baseline_more_horiz_white_48dp.png" />
+    <None Include="Resources\baseline_build_white_48dp.png" />
+    <None Include="Resources\baseline_format_paint_white_48dp.png" />
+    <None Include="Resources\baseline_attach_file_white_48dp.png" />
+    <None Include="Resources\baseline_format_color_fill_white_48dp.png" />
+    <None Include="Resources\baseline_visibility_white_48dp.png" />
+    <None Include="Resources\baseline_adb_white_48dp.png" />
+    <None Include="Resources\baseline_sync_white_48dp.png" />
+    <None Include="Resources\minimize.png" />
+    <None Include="Resources\close_button.png" />
+    <None Include="Resources\csglol.png" />
+    <None Include="Resources\Untitled.png" />
+    <None Include="Resources\baseline_menu_white_48dp.png" />
+    <None Include="Resources\baseline_view_headline_black_18dp.png" />
+    <None Include="Resources\shwmore.png" />
+    <None Include="Resources\csgologo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Options\Bot\" />
+    <Folder Include="Options\Colors\" />
+    <Folder Include="Options\Misc\" />
+    <Folder Include="Options\Other\" />
+    <Folder Include="Options\Settings\" />
+    <Folder Include="Options\Updates\" />
+    <Folder Include="Options\Visuals\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxSystemMonitor">
+      <Guid>{1B773E42-2509-11CF-942F-008029004347}</Guid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole1">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole2">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SystemMonitor">
+      <Guid>{1B773E42-2509-11CF-942F-008029004347}</Guid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+  </Target>
+</Project>

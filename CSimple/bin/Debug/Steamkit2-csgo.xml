@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Steamkit2-csgo</name>
+    </assembly>
+    <members>
+        <member name="T:SteamKit.CSGO.CsgoClient">
+            <summary>
+                Client for CSGO, allows basic operations such as requesting ranks
+            </summary>
+        </member>
+        <member name="M:SteamKit.CSGO.CsgoClient.#ctor(SteamKit2.SteamClient,SteamKit2.CallbackManager,System.Boolean)">
+            <summary>
+                Creates the client
+            </summary>
+            <param name="steamClient">A logged in SteamKit2 SteamClient</param>
+            <param name="callbackManager">The callback manager you used in your log in code</param>
+            <param name="debug">Wether or not we want to have debug output</param>
+        </member>
+        <member name="M:SteamKit.CSGO.CsgoClient.Launch(System.Action{SteamKit2.GC.CSGO.Internal.CMsgClientWelcome})">
+            <summary>
+                Launches the game
+            </summary>
+            <param name="callback">The callback to be executed when the operation finishes</param>
+        </member>
+        <member name="M:SteamKit.CSGO.CsgoClient.MatchmakingStatsRequest(System.Action{SteamKit2.GC.CSGO.Internal.CMsgGCCStrike15_v2_MatchmakingGC2ClientHello})">
+            <summary>
+                Request MatchmakingStats from the game coordinator.
+            </summary>
+            <param name="callback">The callback to be executed when the operation finishes.</param>
+        </member>
+        <member name="M:SteamKit.CSGO.CsgoClient.RequestCurrentLiveGames(System.Action{SteamKit2.GC.CSGO.Internal.CMsgGCCStrike15_v2_MatchList})">
+            <summary>
+                Request the list of currently live games
+            </summary>
+            <param name="callback">The callback to be executed when the operation finishes.</param>
+        </member>
+        <member name="M:SteamKit.CSGO.CsgoClient.RequestLiveGameForUser(System.UInt32,System.Action{SteamKit2.GC.CSGO.Internal.CMsgGCCStrike15_v2_MatchList})">
+            <summary>
+                Requests current live game info for given user.
+            </summary>
+            <param name="accountId">Account to request</param>
+            <param name="callback">The callback to be executed when the operation finishes.</param>
+        </member>
+        <member name="M:SteamKit.CSGO.CsgoClient.RequestGame(SteamKit.CSGO.GameRequest,System.Action{SteamKit2.GC.CSGO.Internal.CMsgGCCStrike15_v2_MatchList})">
+            <summary>
+                Requests info about game given a matchId, outcomeId, and token for a game.
+            </summary>
+            <param name="request">Request parameters</param>
+            <param name="callback">The callback to be executed when the operation finishes.</param>
+        </member>
+        <member name="M:SteamKit.CSGO.CsgoClient.RequestRecentGames(System.UInt32,System.Action{SteamKit2.GC.CSGO.Internal.CMsgGCCStrike15_v2_MatchList})">
+            <summary>
+                Requests a list of recent games for the given account id
+            </summary>
+            <param name="accountId">Account IDd for the request</param>
+            <param name="callback">The callback to be executed when the operation finishes.</param>
+        </member>
+        <member name="M:SteamKit.CSGO.CsgoClient.RequestRecentGames(System.Action{SteamKit2.GC.CSGO.Internal.CMsgGCCStrike15_v2_MatchList})">
+            <summary>
+                Requests a list of recent games for the given account id
+            </summary>
+            <param name="callback">The callback to be executed when the operation finishes.</param>
+        </member>
+        <member name="M:SteamKit.CSGO.CsgoClient.PlayerProfileRequest(System.UInt32,System.Action{SteamKit2.GC.CSGO.Internal.CMsgGCCStrike15_v2_PlayersProfile})">
+            <summary>
+                Request a player profile.
+            </summary>
+            <param name="accountId">AccountID (SteamID32) of the player.</param>
+            <param name="callback">The callback to be executed when the operation finishes.</param>
+        </member>
+        <member name="M:SteamKit.CSGO.CsgoClient.PlayerProfileRequest(System.UInt32,System.UInt32,System.Action{SteamKit2.GC.CSGO.Internal.CMsgGCCStrike15_v2_PlayersProfile})">
+            <summary>
+                Request a player profile.
+            </summary>
+            <param name="accountId">AccountID (SteamID32) of the player.</param>
+            <param name="requestLevel">To be honest i have no idea what this does, default is 32</param>
+            <param name="callback">The callback to be executed when the operation finishes.</param>
+        </member>
+        <member name="T:SteamKit.CSGO.GameRequest">
+            <summary>
+            Request object for RequestGame
+            </summary>
+        </member>
+        <member name="F:SteamKit.CSGO.GameRequest.Token">
+            <summary>
+            UNKNOWN
+            </summary>
+        </member>
+        <member name="F:SteamKit.CSGO.GameRequest.MatchId">
+            <summary>
+            ID of match
+            </summary>
+        </member>
+        <member name="F:SteamKit.CSGO.GameRequest.OutcomeId">
+            <summary>
+            ID of outcome of match
+            </summary>
+        </member>
+        <member name="T:SteamKit.CSGO.CallbackStore">
+            <summary>
+                Stores all callbacks based on time it was places, first created -> first executed
+            </summary>
+        </member>
+    </members>
+</doc>
